@@ -4,8 +4,7 @@ const app = express()
 const port = 3030
 
 app.get('/', (req, res) => {
-    shell.exec("sh test.sh")
-    res.send('Hello World!')
+    res.send(shell.exec("sh ~/deploy.sh"))
 })
 
 app.listen(port, () => {
